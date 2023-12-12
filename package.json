@@ -1,0 +1,20 @@
+{
+  "name": "tailwinddemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "TAILWIND_MODE=Watch postcss ./public/tailwind.css -o ./dist/style.css --watch --verbose",
+    "prod": "NODE_ENV=production postcss ./public/tailwind.css -o ./dist/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.3"
+  }
+}
