@@ -111,6 +111,7 @@ window.addEventListener("load", function () {
 
 
 
+
   // ==============================
   // Gsap Horizontal scroll
   // ==============================
@@ -216,10 +217,68 @@ window.addEventListener("load", function () {
     SlideUp(".wid-child-1", "200", 0, 3, 0, 1, "top 100%", "bottom 75%", false);
     SlideUp(".wid-child-2", "300", 50, 3, 0, 1, "top 100%", "bottom 75%", false);
     SlideUp(".wid-child-3", "400", 100, 3, 0, 1, "top 100%", "bottom 75%", false);
+    SlideUp(".slup", "100", 0, 3, 0, 1, "top 100%", "bottom 75%", false);
+
     // SlideUp(".explore", "250", 150, 3, 0, 1, "top 80%", "bottom 60%", false);
 
   }, 300);
+// ==============================
+    // Gsap Stagger Animation
+    // ==============================
+    function staggerAnim(selector, staggerTime, y) {
+      const selectorelm = document.querySelectorAll(selector);
+      gsap.set(selectorelm, {
+        opacity: 0,
+        y: y
+      });
 
+      let Start, End;
+      if (window.innerWidth > 768) {
+        Start = "top 80%";
+        End = "bottom 50%";
+
+      } else {
+        Start = "top 60%";
+        End = "bottom 0%";
+      }
+
+      ScrollTrigger.batch(selectorelm, {
+        scrub: 2,
+
+        start: Start,
+        end: End,
+        markers: false,
+        onEnter: batch => gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          stagger: staggerTime,
+
+        }),
+        onLeave: batch => gsap.to(batch, {
+          opacity: 0,
+          y: -y,
+
+        }),
+        onEnterBack: batch => gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          stagger: staggerTime
+        }),
+        onLeaveBack: batch => gsap.to(batch, {
+          opacity: 0,
+          y: y
+        }),
+
+      });
+
+      ScrollTrigger.addEventListener("refreshInit", () => gsap.set(selectorelm, {
+        y: y,
+        opacity: 0
+      }));
+    }
+    setTimeout(() => {
+      staggerAnim(".exp-main ", 0.1, 100);
+    }, 300);
 
 // ==================================
 // Multiple Animation About section
@@ -331,10 +390,16 @@ cta_tl.from('.line-3', {
 })
 cta_tl.add(()=>{}, "+=0.2")
 cta_tl.to('.line-3', {
-  opacity:0,
+
   y:"-100px",
-  rotationX:20,
+
 })
+// cta_tl.add(()=>{}, "+=0.2")
+// cta_tl.to('.line-3', {
+//   opacity:0,
+//   y:"-100px",
+//   rotationX:20,
+// })
 
 // console.warn(CTAmain.clientHeight);
 
@@ -343,7 +408,7 @@ setTimeout(() => {
   ScrollTrigger.create({
     trigger: CTAmain,
     // pinnedContainer: '.container-pin',
-    start: 'top top',
+    start: 'top 25%',
     end:`+=${CTAmain.clientHeight + 4000 + 'px '}`,
 
     pin: true,

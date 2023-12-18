@@ -32,7 +32,7 @@ module.exports = {
         'playfair': ["Playfair Display", 'serif'],
       },
       colors: {
-        'white':'#f8f8f8',
+        'white':'#D5CDC4',
         'light-black': '#000',
 
       },
