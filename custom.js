@@ -335,7 +335,7 @@ ScrollTrigger.create({
   trigger: main,
   // pinnedContainer: '.container-pin',
   start: 'top top',
-  end:`+=${main.clientHeight + mobile ? 2000 : 4000  + 'px '}`,
+  end:`+=${main.clientHeight + mobile ? 1500 : 4000  + 'px '}`,
 
   pin: true,
   pinSpacing:true,
@@ -343,7 +343,7 @@ ScrollTrigger.create({
   animation: tl,
   markers: false,
 })
-console.log(main.clientHeight , mobile ? 2000 : 4000 )
+
 // ===================================
 // Multiple Animation Call To Action
 // ===================================
@@ -424,7 +424,7 @@ setTimeout(() => {
     trigger: CTAmain,
     // pinnedContainer: '.container-pin',
     start: 'top 25%',
-    end:`+=${CTAmain.clientHeight + mobile ? 2000 : 4000 + 'px '}`,
+    end:`+=${CTAmain.clientHeight + mobile ? 1500 : 4000 + 'px '}`,
 
     pin: true,
     scrub: true,
