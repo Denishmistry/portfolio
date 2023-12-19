@@ -343,7 +343,7 @@ ScrollTrigger.create({
   animation: tl,
   markers: false,
 })
-
+console.log(main.clientHeight , mobile ? 2000 : 4000 )
 // ===================================
 // Multiple Animation Call To Action
 // ===================================
