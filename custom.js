@@ -335,7 +335,7 @@ ScrollTrigger.create({
   trigger: main,
   // pinnedContainer: '.container-pin',
   start: 'top top',
-  end:`+=${main.clientHeight + 4000 + 'px '}`,
+  end:`+=${main.clientHeight + mobile ? 2000 : 4000  + 'px '}`,
 
   pin: true,
   pinSpacing:true,
@@ -424,7 +424,7 @@ setTimeout(() => {
     trigger: CTAmain,
     // pinnedContainer: '.container-pin',
     start: 'top 25%',
-    end:`+=${CTAmain.clientHeight + 4000 + 'px '}`,
+    end:`+=${CTAmain.clientHeight + mobile ? 2000 : 4000 + 'px '}`,
 
     pin: true,
     scrub: true,
