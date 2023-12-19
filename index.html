@@ -27,7 +27,7 @@
       ===================================================================================-->
 
   <header class="  absolute z-20 left-0 ring-0 w-full [&.open]:fixed [&.fixed-header] [&.header-anim]">
-    <nav class=" container relative px-2 py-4">
+    <nav class="  relative px-2 py-4">
 
       <div class="container mx-auto flex  items-center">
         <a href="index.html">
@@ -38,24 +38,25 @@
         <ul
           class="hidden mobilemenu md:flex group lg:ml-8  md:space-x-[50px] [&.open]:items-center [&.open]:justify-center [&.open]:h-screen [&.open]:max-w-full [&.open]:flex [&.open]:fixed [&.open]:inset-0 [&.open]:flex-col [&.open]:bg-white  lg:items-center  ">
           <li class="text-sm font-light text-white group-[.open]:py-5 group-[.open]:px-5 hover:text-gray-300"><a
-              class="tracking-wide " href="index.html">Home</a></li>
+              class="tracking-wide " href="#home">Home</a></li>
           <li class="text-sm font-light text-white group-[.open]:py-5 group-[.open]:px-5 hover:text-gray-300"><a
-              class="tracking-wide " href="about.html">About</a></li>
+              class="tracking-wide " href="#about">About</a></li>
           <li class="text-sm font-light text-white group-[.open]:py-5 group-[.open]:px-5 hover:text-gray-300"><a
-              class="tracking-wide " href="project.html">Projects</a></li>
+              class="tracking-wide " href="#service">Service</a></li>
 
           <li class="text-sm font-light text-white group-[.open]:py-5 group-[.open]:px-5 hover:text-gray-300"><a
-              class="tracking-wide " href="index.html#plan">Plan</a></li>
+              class="tracking-wide " href="#project">project</a></li>
 
           <li class="text-sm font-light text-white group-[.open]:py-5 group-[.open]:px-5 hover:text-gray-300"><a
-              class="tracking-wide " href="news.html">News</a></li>
-
+              class="tracking-wide " href="#experience">Experience</a></li>
+          <li class="text-sm font-light text-white group-[.open]:py-5 group-[.open]:px-5 hover:text-gray-300"><a
+              class="tracking-wide " href="#blog">Blogs</a></li>
 
         </ul>
-        <a href="#contact" class="btn lg:ml-auto !bg-white !text-slate-800">+91 9812345678</a>
+        <a href="tel:+91 9812345678" class="btn ml-auto !bg-white !text-slate-800">Let's Talk</a>
         <!-- Mobile menu icon -->
 
-        <button class="mobile-icon md:hidden  [&.open]:z-50 [&.open]:relative ">
+        <button class="mobile-icon md:hidden ml-3 [&.open]:z-50 [&.open]:relative ">
           <span class="material-icons open">menu</span>
         </button>
       </div>
@@ -112,10 +113,10 @@
       </div>
     </div>
     <div class="container relative">
-      <div class="social absolute uppercase z-10  bottom-10 left-0">
-        <a class="text-white text-sm mr-5 " href="#!">Instagram</a>
-        <a class="text-white text-sm  mr-5" href="#!">Behance</a>
-        <a class="text-white  text-sm   mr-5" href="#!">Linkedin</a>
+      <div class="social absolute uppercase z-10  lg:bottom-10 bottom-5 lg:left-0">
+        <a class="text-white font-light text-sm mr-5 " href="#!">Instagram</a>
+        <a class="text-white text-sm  font-light mr-5" href="#!">Behance</a>
+        <a class="text-white  text-sm  font-light  mr-5" href="#!">Linkedin</a>
       </div>
     </div>
 
@@ -124,14 +125,19 @@
   <!--===================================================================================
                                            About Section
         ===================================================================================-->
-  <section id="about" class=" overflow-hidden lg:py-24 pb-48 flex items-center relative py-10 min-h-screen">
+        <div class="scroll-down mx-auto">
+          <span></span>
+          <span></span>
+          <span></span>
+       </div>
+  <section  class=" about overflow-hidden lg:py-24 lg:pb-48 flex items-center relative py-10 min-h-screen">
     <div class="container   lg:ml-auto px-4  sm:px-6 lg:px-8  mx-auto">
       <!-- Grid -->
       <div class="flex about-image justify-center absolute inset-0  h-screen items-center">
-        <img class=" max-w-full h-auto object-contain" src="public/images/new-black.png" alt="Image Description"
+        <img class=" max-w-full h-auto object-contain lg:p-0 p-5" src="public/images/new-black.png" alt="Denish Mistry"
           width="585" height="530">
       </div>
-      <div class="about-wrapper  ">
+      <div id="about" class="about-wrapper  ">
 
 
         <div class="mt-5 max-w-4xl ">
@@ -160,17 +166,17 @@
       </div>
       <!-- End Grid -->
     </div>
-
   </section>
+
   <!--===================================================================================
                                          What we do Section
         ===================================================================================-->
 
-  <section class="whatido py-36 lg:pb-64  ">
-    <div class="max-w-[90%] mx-auto ">
-      <div class="wid-main flex lg:flex-row  ">
+  <section id="service" class="whatido lg:py-36  py-12 lg:pb-64  ">
+    <div class="lg:max-w-[90%] mx-auto ">
+      <div class="wid-main flex lg:flex-row flex-col  ">
         <!--  -->
-        <div class="wid-child-1 basis-2/6 xl:pr-32">
+        <div class="wid-child-1 lg:basis-2/6 basis-full xl:pr-32 px-4 lg:px-0 mb-12 lg:mb-0">
           <h2 class="font-playfair lg:text-3xl text-2xl lg:mb-6 mb-5">Planning</h2>
           <p class="text-base font-light">I excel in translating your ideas into digital projects by identifying and
             addressing all your needs. From
@@ -180,7 +186,7 @@
         </div>
         <!--  -->
         <!--  -->
-        <div class="wid-child-2 basis-2/6 xl:pr-32 ">
+        <div class="wid-child-2 lg:basis-2/6 basis-full xl:pr-32 px-4 lg:px-0 mb-12 lg:mb-0">
           <h2 class="font-playfair lg:text-3xl text-2xl lg:mb-6 mb-5">UX / UI</h2>
           <p class="text-base font-light">
             We excel in UX/UI design by seamlessly blending distinctive taste with
@@ -192,7 +198,7 @@
         </div>
         <!--  -->
         <!--  -->
-        <div class="wid-child-3 basis-2/6 xl:pr-32 ">
+        <div class="wid-child-3 lg:basis-2/6 basis-full xl:pr-32 px-4 lg:px-0 mb-12 lg:mb-0">
           <h2 class="font-playfair lg:text-3xl text-2xl lg:mb-6 mb-5">Development</h2>
           <p class="text-base font-light">
             We excel in UX/UI design by seamlessly blending distinctive taste with
@@ -220,7 +226,7 @@
   <!--===================================================================================
                                          Project Title
         ===================================================================================-->
-  <section class="lg:py-40 overflow-hidden">
+  <section id="project" class="lg:py-40 py-20 overflow-hidden">
     <div class="text-animation-main  p-0 transform rotate-[5deg]">
       <div class="text-animation project_text whitespace-nowrap overflow-visible px-12 flex w-full transform  ">
         <h2 class="lg:text-8xl text-5xl lg:leading-lh16 font-bold text-white">Projects / Feature Work /</h2>
@@ -236,12 +242,12 @@
                                            Projects Section
         ===================================================================================-->
 
-  <section id="Projects" class=" projects  h-screen  bg-black flex overflow-hidden w-full">
+  <section  class=" projects  h-screen  bg-black flex overflow-hidden w-full">
 
     <div class="pin-wrap flex items-center justify-start px-[2vw]  ">
 
       <!-- Card -->
-      <a class="group lg:w-[90vw]  mr-5 relative block" href="project-listing.html">
+      <a class="group  lg:w-[90vw] w-[95vh]  mr-5 relative block" href="project-listing.html">
         <div
           class="flex-shrink-0 relative w-full  overflow-hidden  h-[90vh] before:absolute before:inset-x-0 before:w-full before:h-full before:bg-gradient-to-t hover:before:bg-gradient-to-bt hover:before:from-gray-900/[0.8] before:from-gray-900/[.7] before:z-[1]">
           <img class="w-full h-full absolute top-0 left-0 object-cover" width="1200" height="768"
@@ -260,9 +266,14 @@
 
             </p>
             <div class="mt-5">
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">UX Design</span>
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">UI Design</span>
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">Development</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">UX
+                Design</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">UI
+                Design</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">Development</span>
 
             </div>
           </div>
@@ -270,7 +281,7 @@
       </a>
       <!-- End Card -->
       <!-- Card -->
-      <a class="group lg:w-[90vw]  mr-5 relative block" href="project-listing.html">
+      <a class="group  lg:w-[90vw] w-[95vh]  mr-5 relative block" href="project-listing.html">
         <div
           class="flex-shrink-0 relative w-full  overflow-hidden  h-[90vh] before:absolute before:inset-x-0 before:w-full before:h-full before:bg-gradient-to-t hover:before:bg-gradient-to-bt hover:before:from-gray-900/[0.8] before:from-gray-900/[.7] before:z-[1]">
           <img class="w-full h-full absolute top-0 left-0 object-cover" width="1200" height="768"
@@ -289,9 +300,14 @@
               experience, projects, and values.
             </p>
             <div class="mt-5">
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">UX Design</span>
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">UI Design</span>
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">Development</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">UX
+                Design</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">UI
+                Design</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">Development</span>
 
             </div>
           </div>
@@ -299,7 +315,7 @@
       </a>
       <!-- End Card -->
       <!-- Card -->
-      <a class="group lg:w-[90vw]  mr-5 relative block" href="project-listing.html">
+      <a class="group  lg:w-[90vw] w-[95vh]  mr-5 relative block" href="project-listing.html">
         <div
           class="flex-shrink-0 relative w-full  overflow-hidden  h-[90vh] before:absolute before:inset-x-0 before:w-full before:h-full before:bg-gradient-to-t hover:before:bg-gradient-to-bt hover:before:from-gray-900/[0.8] before:from-gray-900/[.7] before:z-[1]">
           <img class="w-full h-full absolute top-0 left-0 object-cover" width="1200" height="768"
@@ -319,9 +335,14 @@
               experience, projects, and values.
             </p>
             <div class="mt-5">
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">UX Design</span>
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">UI Design</span>
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">Development</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">UX
+                Design</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">UI
+                Design</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">Development</span>
 
             </div>
           </div>
@@ -330,7 +351,7 @@
       <!-- End Card -->
 
       <!-- Card -->
-      <a class="group lg:w-[90vw]  mr-5 relative block" href="project-listing.html">
+      <a class="group  lg:w-[90vw] w-[95vh]  mr-5 relative block" href="project-listing.html">
         <div
           class="flex-shrink-0 relative w-full  overflow-hidden  h-[90vh] before:absolute before:inset-x-0 before:w-full before:h-full before:bg-gradient-to-t hover:before:bg-gradient-to-bt hover:before:from-gray-900/[0.8] before:from-gray-900/[.7] before:z-[1]">
           <img class="w-full h-full absolute top-0 left-0 object-cover" width="1200" height="768"
@@ -350,9 +371,14 @@
               various purposes, including leisure travel, business trips, and special occasions.
             </p>
             <div class="mt-5">
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">UX Design</span>
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">UI Design</span>
-              <span class="px-4 py-2 text-xs font-light border border-slate-200 mr-4 rounded-full">Development</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">UX
+                Design</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">UI
+                Design</span>
+              <span
+                class="lg:px-4 px-2 py-2 text-xs font-light border border-slate-200 lg:mr-4 mr-2 rounded-full inline-block mb-3">Development</span>
 
             </div>
           </div>
@@ -367,15 +393,16 @@
   <!-- =========================================================================================
                                            Expirence
          ====================================================================================== -->
-  <section class="lg:py-40 relative expirence">
+  <section id="experience" class="lg:py-40 py-20 relative expirence">
 
-    <div  class="container">
+    <div class="container">
 
       <h2 class="font-playfair slup lg:text-3xl text-2xl lg:mb-6 mb-5">
         Professional
         Experience
       </h2>
-      <p class="text-base slup font-light max-w-xl mb-8 lg:mb-20">Over six years, I've navigated diverse roles in various
+      <p class="text-base slup font-light max-w-xl mb-8 lg:mb-20">Over six years, I've navigated diverse roles in
+        various
         organizations,
         building a versatile skill set. From foundational skills to strategic thinking and collaborative
         problem-solving, I've thrived in dynamic environments. My journey underscores a commitment to learning and
@@ -388,10 +415,10 @@
 
         <div class="border-y border-white/20  py-4    relative  flex flex-col  ">
           <div class="w-full">
-            <div class="flex items-baseline ">
-              <div class=" mr-5 font-playfair text-xl">Indianic Infotech
+            <div class="flex lg:items-baseline flex-col lg:flex-row ">
+              <div class=" lg:mr-5 font-playfair lg:text-xl text-base mb-1 lg:mb-0">Indianic Infotech
               </div>
-              <div class=" ml-auto ml-5 font-light text-sm">
+              <div class=" lg:ml-auto  font-light text-sm">
                 Sr. Front-End Developer <span class="text-sm ml-3">2021 - Prasent</span>
               </div>
             </div>
@@ -406,7 +433,7 @@
                 Magento for themes, and I'm familiar with ReactJS for web projects.
               </p>
             </div>
-            <div class="skill-wrapper mt-4 lg:mt-5 flex items-start  mt-4 lg:mt-5">
+            <div class="skill-wrapper overflow-x-auto pb-3 lg:pb-0 mt-4 lg:mt-5 flex items-start  mt-4 lg:mt-5">
 
               <!-- skill-box -->
               <div class="progrees-skill relative inline-block text-center mr-5">
@@ -584,10 +611,10 @@
 
         <div class="border-y border-white/20  py-4    relative  flex flex-col  ">
           <div class="w-full">
-            <div class="flex items-baseline ">
-              <div class=" mr-5 font-playfair text-xl">Sankhala Infotech
+            <div class="flex lg:items-baseline flex-col lg:flex-row ">
+              <div class=" lg:mr-5 font-playfair lg:text-xl text-base mb-1 lg:mb-0">Sankhala Infotech
               </div>
-              <div class=" ml-auto ml-5 font-light text-sm">
+              <div class=" lg:ml-auto  font-light text-sm">
                 Lead Web Designer <span class="text-sm ml-3">2017 - 2020</span>
               </div>
             </div>
@@ -601,7 +628,7 @@
                 animations. I also design JavaScript-based components tailored to meet specific client requirements.
               </p>
             </div>
-            <div class="skill-wrapper mt-4 lg:mt-5 flex items-start  mt-4 lg:mt-5">
+            <div class="skill-wrapper overflow-x-auto pb-3 lg:pb-0 mt-4 lg:mt-5 flex items-start  mt-4 lg:mt-5">
 
               <!-- skill-box -->
               <div class="progrees-skill relative inline-block text-center mr-5">
@@ -749,9 +776,9 @@
 
         <div class="border-y border-white/20  py-4    relative  flex flex-col  ">
           <div class="w-full">
-            <div class="flex items-baseline ">
-              <div class=" mr-5 font-playfair text-xl">Sparsh Design</div>
-              <div class=" ml-auto ml-5 font-light text-sm">
+            <div class="flex lg:items-baseline flex-col lg:flex-row ">
+              <div class=" lg:mr-5 font-playfair lg:text-xl text-base mb-1 lg:mb-0">Sparsh Design</div>
+              <div class=" lg:ml-auto  font-light text-sm">
                 Web Designer <span class="text-sm ml-3">2016 - 2017</span>
               </div>
             </div>
@@ -765,7 +792,7 @@
                 proficiency, ensuring a seamless and visually engaging user experience for our projects.
               </p>
             </div>
-            <div class="skill-wrapper mt-4 lg:mt-5 flex items-start  mt-4 lg:mt-5">
+            <div class="skill-wrapper overflow-x-auto pb-3 lg:pb-0 mt-4 lg:mt-5 flex items-start  mt-4 lg:mt-5">
 
               <!-- skill-box -->
               <div class="progrees-skill relative inline-block text-center mr-5">
@@ -890,21 +917,21 @@
                                            Blogs
          ====================================================================================== -->
 
-  <section class="lg:py-40">
+  <section id="blog" class="lg:py-40">
     <div class="w-full ">
       <div class="text-center">
-        <h2 class="font-playfair lg:text-3xl text-2xl lg:mb-6 mb-5">
+        <h2 class="slup font-playfair lg:text-3xl text-2xl lg:mb-6 mb-5">
           Latest Blog
         </h2>
-        <p class="text-base font-light max-w-xl mx-auto mb-8 lg:mb-20 text-center">
+        <p class="slup text-base font-light max-w-xl mx-auto mb-8 lg:mb-20 text-center">
           Words that Resonate, Ideas that Captivate
           <br> Welcome to our Blog
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-0">
+      <div class="grid blog-main lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-0">
 
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5">
+        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -936,7 +963,7 @@
           </div>
         </div>
 
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5">
+        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -968,7 +995,7 @@
           </div>
         </div>
 
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5">
+        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -999,7 +1026,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5">
+        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -1030,7 +1057,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5">
+        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -1061,7 +1088,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5">
+        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
           </h3>
@@ -1091,7 +1118,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5">
+        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -1122,7 +1149,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5">
+        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -1159,7 +1186,7 @@
   <!--===================================================================================
                                          Call To Action
         ===================================================================================-->
-  <section id="cta" class="overflow-hidden  flex items-center min-h-[50vh]">
+  <section id="cta" class="overflow-hidden  flex items-center min-h-[50vh] px-4">
     <div class="container text-center relative max-w-3xl">
       <div class="line-1 lg:text-3xl absolute inset-0 flex justify-center items-center   font-light font-playfair"> I
         Enjoy working with agencies and enthusiastic people who want to solve problems through beautiful
@@ -1168,14 +1195,15 @@
         Are You Intrested ?
       </div>
       <div class="line-3  lg:text-3xl  absolute inset-0 flex flex-col gap-5 justify-center items-center  ">
-        <span class="font-light font-playfair w-full text-center lg:text-7xl text-4xl mb-5  text-white" >
+        <span class="font-light font-playfair w-full text-center lg:text-7xl text-4xl mb-5  text-white">
           Drop me a line!
         </span>
-        <div class="flex lg:flex-row  gap-10 w-full">
-          <a class="btn block lg:text-2xl bg-white text-slate-800 w-[50%] py-4" href="mailto: mistrydenish009@gmail.com">
+        <div class="flex lg:flex-row  lg:gap-10 gap-5 w-full">
+          <a class="btn block lg:text-2xl bg-white text-slate-800 w-[50%] lg:py-4"
+            href="mailto: mistrydenish009@gmail.com">
             Write a Massage
           </a>
-          <a class="btn block lg:text-2xl border border-white w-[50%] py-4" href="tel:955888421">
+          <a class="btn block lg:text-2xl border border-white w-[50%] lg:py-4" href="tel:955888421">
             Let's Talk
           </a>
         </div>
@@ -1186,45 +1214,47 @@
   <!--===================================================================================
                                            Footer
     ===================================================================================-->
-    <footer id="contact" class="rounded-lg shadow bg-transparent border-t-gray-700 border-t pt-8">
-      <div class=" w-full container mx-auto p-4 md:py-8">
-        <div class="sm:flex lg:flex-row flex-column sm:items-center sm:justify-between">
-          <a href="index.html">
-            <div class="text-white text-base  ">Denish <span class="opacity-50 font-light">Mistry</span></div>
-          </a>
-          <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+  <footer id="contact" class="rounded-lg shadow bg-transparent border-t-gray-700 border-t ">
+    <div class=" w-full container mx-auto p-4 md:py-5">
+      <div class="sm:flex lg:flex-row flex-column sm:items-center sm:justify-between">
+        <a href="index.html">
+          <div class="text-white text-lg mb-3 lg:mb-0  ">Denish <span class="opacity-50 font-light">Mistry</span></div>
+        </a>
+        <ul
+          class="flex flex-wrap lg:gap-12 gap-4 items-center lg:mb-6 mb-3 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
 
 
-            <li class="text-sm font-thin text-gray-400 mx-2 hover:hover:text-gray-500
-          "><a data-scroll-to href="#home">Home</a></li>
-            <li class="text-sm font-thin text-gray-400 mx-2 hover:hover:text-gray-500 mx-2
-          "><a data-scroll-to href="#about" href="#">About</a></li>
-            <li class="text-sm font-thin text-gray-400 mx-2 hover:hover:text-gray-500 mx-2
+
+          <li class="text-sm font-thin text-white
+          "><a href="#home">Home</a></li>
+          <li class="text-sm font-thin text-white
+          "><a href="#about" href="#">About</a></li>
+          <li class="text-sm font-thin text-white
+          "><a href="#service" href="#">Service</a></li>
+
+          <li class="text-sm font-thin text-white
           ">
-              <a data-scroll-to href="#project" href="#" class="mr-1">Project</a>
+            <a href="#project" href="#" class="mr-1">Project</a>
 
-            </li>
-            <li class="text-sm font-thin text-gray-400 mx-2 hover:hover:text-gray-500 mx-2
-          "><a data-scroll-to href="#service" href="#">Service</a></li>
-            <li class="text-sm font-thin text-gray-400 mx-2 hover:hover:text-gray-500 mx-2
-          "><a data-scroll-to href="#what-we-do-sec" href="#">What we do</a></li>
-            <li class="text-sm font-thin text-gray-400 mx-2 hover:hover:text-gray-500 mx-2
-          "><a data-scroll-to href="#feature" href="#">Feature</a></li>
+          </li>
+          <li class="text-sm font-thin text-white
+          "><a href="#experience">Experience</a></li>
+          <li class="text-sm font-thin text-white
+          "><a href="#blogs" href="#blogs">Blogs</a></li>
 
-            <li class="text-sm font-thin text-gray-400 mx-2 hover:hover:text-gray-500 mx-2
-          "><a data-scroll-to href="#contact" href="#">Contact</a></li>
-          </ul>
-        </div>
-        <!-- <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-900 lg:my-5" /> -->
-        <span class="block text-sm text-gray-500 sm:text-center mt-5 dark:text-gray-400">© 2023 <a
-            href="https://xyz.com/" class="hover:underline">xyz</a>. All Rights Reserved.</span>
+        </ul>
       </div>
-    </footer>
+      <!-- <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-900 lg:my-5" /> -->
+      <span class="block text-sm text-white/30 sm:text-center my-3">© 2023 <a href="https://xyz.com/"
+          class="hover:underline">xyz</a>. All Rights Reserved.</span>
+    </div>
+  </footer>
 
 
   <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script>
+
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js'></script>
   <script src="./custom.js"></script>
 
 

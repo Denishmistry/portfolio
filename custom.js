@@ -1,6 +1,14 @@
 window.addEventListener("load", function () {
   init();
+  var mobile = window.innerWidth < 768;
+  // console.log(mobile);
   gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
+
   // ================
   // Custom Cursor
   // ===============
@@ -214,10 +222,10 @@ window.addEventListener("load", function () {
   }
   setTimeout(() => {
     SlideUp(".social", 0, -20, 3, 1, 0, "top 80%", "bottom 80%", false);
-    SlideUp(".wid-child-1", "200", 0, 3, 0, 1, "top 100%", "bottom 75%", false);
-    SlideUp(".wid-child-2", "300", 50, 3, 0, 1, "top 100%", "bottom 75%", false);
-    SlideUp(".wid-child-3", "400", 100, 3, 0, 1, "top 100%", "bottom 75%", false);
-    SlideUp(".slup", "100", 0, 3, 0, 1, "top 100%", "bottom 75%", false);
+    SlideUp(".wid-child-1", `${mobile ? "60" : "200"}`, 0, 3, 0, 1, "top 100%", "bottom 75%", false);
+    SlideUp(".wid-child-2", `${mobile ? "60" : "300"}`, `${mobile ? "0" : "50"}`, 3, 0, 1, "top 100%", "bottom 75%", false);
+    SlideUp(".wid-child-3", `${mobile ? "60" : "400"}`, `${mobile ? "0" : "100"}`, 3, 0, 1, "top 100%", "bottom 75%", false);
+    SlideUp(".slup", "100", 0, 3, 0, 1, "top 100%", `${mobile ? "bottom 85%" : "bottom 75%"}`, false);
 
     // SlideUp(".explore", "250", 150, 3, 0, 1, "top 80%", "bottom 60%", false);
 
@@ -235,7 +243,7 @@ window.addEventListener("load", function () {
       let Start, End;
       if (window.innerWidth > 768) {
         Start = "top 80%";
-        End = "bottom 50%";
+        End = "bottom 30%";
 
       } else {
         Start = "top 60%";
@@ -278,6 +286,8 @@ window.addEventListener("load", function () {
     }
     setTimeout(() => {
       staggerAnim(".exp-main ", 0.1, 100);
+      staggerAnim(".blog ", 0.1, 100);
+
     }, 300);
 
 // ==================================
@@ -285,7 +295,7 @@ window.addEventListener("load", function () {
 // ===================================
 
 
-const main = document.querySelector('#about')
+const main = document.querySelector('.about')
 
 const tl = gsap.timeline({})
 tl.from('.about-image', {
@@ -298,15 +308,20 @@ tl.from('.about-image', {
 
 })
 tl.add(()=>{}, "+=0.2")
-tl.from('.about-image', {
-  // scale:1,
 
 
-}).to('.about-image', {
-  scale:0.8,
-  opacity:0.5,
-  x:"30%"
-})
+  tl.from('.about-image', {
+    // scale:1,
+
+
+  }).to('.about-image', {
+    scale:0.8,
+    opacity:`${mobile ? "0" : "0.5"}`,
+    x:`${mobile ? "0" : "30%"}`
+  })
+
+
+
 tl.add(()=>{}, "+=0.2") // Add delay to the next animation
 tl.from('.about-wrapper', {
   y: 50,
@@ -492,19 +507,20 @@ TextScrollFunction(".project_text", "-100%", "-200%");
 
     lastScrollTop = st;
   }
-  // ===============
-  // Sticky Section
-  // ===============
+
 
 
 });
-
+  // =======================
+  // Smooth windows Scroll
+  // =======================
 
 function init() {
   new SmoothScroll(document, 120, 12)
 }
 
 function SmoothScroll(target, speed, smooth) {
+
   if (target === document)
     target = (document.scrollingElement ||
       document.documentElement ||
@@ -572,6 +588,8 @@ function SmoothScroll(target, speed, smooth) {
     );
   }()
 }
+
+
 
 
 // ================
