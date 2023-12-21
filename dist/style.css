@@ -1175,7 +1175,7 @@ header.fixed-header.header-anim {
   height: 100vh;
   overflow: hidden;
   width: 100vw;
-  background: #000;
+  background: #161616;
   z-index: 99999999;
 }
 .page-transition img {
@@ -1200,7 +1200,7 @@ header.fixed-header.header-anim {
   top: 50vh;
   left: 50vw;
   z-index: 99999999;
-  transform: translate(-50%, -50%);
+
 }
 /* .line-count-5{
     overflow: hidden;

@@ -189,12 +189,11 @@ window.addEventListener("load", function () {
 
     });
   }
-  if(loading === true){
 
-    OnLoadAnimation(".home h1", 20, 0, 0, 1, 2);
-    OnLoadAnimation(".home p", 20, 0, 0, 1, 2.5);
-    OnLoadAnimation(".home a", 20, 0, 0, 1, 3);
-  }
+    OnLoadAnimation(".home h1", 20, 0, 0, 1, 3);
+    OnLoadAnimation(".home p", 20, 0, 0, 1, 3.5);
+    OnLoadAnimation(".home a", 20, 0, 0, 1, 4);
+
 
 
   // ======================
@@ -636,7 +635,7 @@ let tltransition = new TimelineMax({
   })
   .fromTo(
     $frameRed,
-    0.5, {
+    1.2, {
       scaleX: 0,
     }, {
       scaleX: 1,
@@ -646,7 +645,7 @@ let tltransition = new TimelineMax({
   )
   .fromTo(
     $frameBlack,
-    .5, {
+    1.2, {
       scaleX: 0,
     }, {
       scaleX: 1,
@@ -655,21 +654,14 @@ let tltransition = new TimelineMax({
     },
     0.2
   )
-  .fromTo(
-    $logo,
-    0.5, {
-      // xPercent: -150,
-      autoAlpha: 0,
-    }, {
-
-      autoAlpha: 1,
-      ease: Power4.easeInOut,
-    },
-    0.5
-  )
-  .set($frameRed, {
-    scaleX: 0,
-  })
+  .fromTo($logo , 0.5,
+     {xPercent: -100, autoAlpha:0 },
+     {xPercent: -50, autoAlpha:1,
+      ease: Power4.easeInOut},
+    .7)
+    .set($frameRed, {
+      scaleX: 0,
+    })
 
   // .fromTo(
   //   $header, {
@@ -679,27 +671,26 @@ let tltransition = new TimelineMax({
   //     ease: Power4.easeInOut,
   //   }
   // )
-
-  .to($frameBlack, 0.8, {
-    scaleX: 0,
-    transformOrigin: "right",
-    ease: Power4.easeInOut,
-  } )
-  .to(
-    $logo,
-    0.2, {
-
-      autoAlpha: 0,
-    },
-    "-=0.35"
-  ).
-  to($header,
+  .to($header,
     {
      opacity: 1,
    }
- ).
-  to($main,
+ ).to($main,
     {
      opacity: 1,
    }
  )
+  .to($frameBlack,1.2, {
+    scaleX: 0,
+    transformOrigin: "right",
+    ease: Power4.easeInOut,
+  } )
+
+  .to(
+    $logo,
+    0.2, {
+      xPercent: 100,
+      autoAlpha: 0,
+    },
+    '-=1.2'
+  )
