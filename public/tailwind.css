@@ -44,6 +44,55 @@
 }
 @layer utilities {
 
+/* page transition */
+.page-transition__black {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  background: #000;
+  z-index: 99999999;
+}
+
+.page-transition img {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.page-transition__seondary {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(255, 255, 255);
+  z-index: 99999999;
+}
+
+.transition__logo {
+
+  font-size: 30px;
+  position: fixed;
+  color: #fff;
+  top: 50vh;
+  left: 50vw;
+  z-index: 99999999;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+  /* .line-count-5{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+  } */
 
   * {
     scrollbar-color: rgba(35, 38, 47, 0.3) transparent;

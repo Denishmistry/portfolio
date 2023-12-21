@@ -17,7 +17,21 @@
   <link href="./dist/style.css" rel="stylesheet">
 </head>
 
-<body class="bg-light-black text-white ">
+<body class="bg-light-black text-white  ">
+
+  <!--===================================================================================
+                                        Loader
+      ===================================================================================-->
+  <div class="page-transition">
+      <div class="page-transition__seondary"></div>
+      <div class="page-transition__black"></div>
+      <div class="transition__logo hover">
+        <strong>Denish</strong> Mistry
+      </div>
+  </div>
+<!--===================================================================================
+                                        Loader
+      ===================================================================================-->
   <!--===================================================================================
                                         Cursor
       ===================================================================================-->
@@ -26,7 +40,9 @@
                                         Header
       ===================================================================================-->
 
-  <header class="  absolute z-20 left-0 ring-0 w-full [&.open]:fixed [&.fixed-header] [&.header-anim]">
+
+
+  <header class=" opacity-0  absolute z-20 left-0 ring-0 w-full [&.open]:fixed [&.fixed-header] [&.header-anim]">
     <nav class="  relative px-2 py-4">
 
       <div class="container mx-auto flex  items-center">
@@ -62,7 +78,7 @@
       </div>
     </nav>
   </header>
-
+  <main class="opacity-0">
   <!--===================================================================================
                                            Hero Section
         ===================================================================================-->
@@ -125,11 +141,7 @@
   <!--===================================================================================
                                            About Section
         ===================================================================================-->
-        <div class="scroll-down mx-auto">
-          <span></span>
-          <span></span>
-          <span></span>
-       </div>
+
   <section  class=" about overflow-hidden lg:py-24 lg:pb-48 flex items-center relative py-10 min-h-screen">
     <div class="container   lg:ml-auto px-4  sm:px-6 lg:px-8  mx-auto">
       <!-- Grid -->
@@ -931,7 +943,7 @@
 
       <div class="grid blog-main lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-0">
 
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
+        <div class="flex flex-col border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -940,16 +952,20 @@
             <span class="text-white/50 text-base font-light mb-2 mr-2 inline-block">18 dec, 2023 &#x2022; 5 min
               read</span>
           </div>
-          <p class="font-light text-base">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
+          <div>
+            <p class="font-light  text-base line-clamp-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
 
-          </p>
+            </p>
+            <a class="underline mt-1" href="#!">Readmore</a>
 
-          <div class="relative mt-8 flex items-center gap-x-4">
+          </div>
+
+          <div class="relative mt-auto flex items-center gap-x-4">
             <img src="https://source.unsplash.com/random/?face=random" alt="" class="h-10 w-10 rounded-full bg-gray-50">
             <div class="text-sm leading-6">
               <p class="font-semibold text-gray-900">
@@ -963,7 +979,7 @@
           </div>
         </div>
 
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
+        <div class="flex flex-col border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -972,16 +988,20 @@
             <span class="text-white/50 text-base font-light mb-2 mr-2 inline-block">18 dec, 2023 &#x2022; 5 min
               read</span>
           </div>
-          <p class="font-light text-base">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
+           <div class="mb-8">
+            <p class="font-light  text-base line-clamp-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
 
-          </p>
+            </p>
+            <a class="underline mt-1" href="#!">Readmore</a>
 
-          <div class="relative mt-8 flex items-center gap-x-4">
+          </div>
+
+          <div class="relative mt-auto flex items-center gap-x-4">
             <img src="https://source.unsplash.com/random/?user=id=2" alt="" class="h-10 w-10 rounded-full bg-gray-50">
             <div class="text-sm leading-6">
               <p class="font-semibold text-gray-900">
@@ -995,7 +1015,7 @@
           </div>
         </div>
 
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
+        <div class="flex flex-col border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -1004,16 +1024,20 @@
             <span class="text-white/50 text-base font-light mb-2 mr-2 inline-block">18 dec, 2023 &#x2022; 5 min
               read</span>
           </div>
-          <p class="font-light text-base">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
+           <div class="mb-8">
+            <p class="font-light  text-base line-clamp-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
 
-          </p>
+            </p>
+            <a class="underline mt-1" href="#!">Readmore</a>
 
-          <div class="relative mt-8 flex items-center gap-x-4">
+          </div>
+
+          <div class="relative mt-auto flex items-center gap-x-4">
             <img src="https://source.unsplash.com/random/?user=id=3" alt="" class="h-10 w-10 rounded-full bg-gray-50">
             <div class="text-sm leading-6">
               <p class="font-semibold text-gray-900">
@@ -1026,7 +1050,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
+        <div class="flex flex-col border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -1035,16 +1059,20 @@
             <span class="text-white/50 text-base font-light mb-2 mr-2 inline-block">18 dec, 2023 &#x2022; 5 min
               read</span>
           </div>
-          <p class="font-light text-base">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
+           <div class="mb-8">
+            <p class="font-light  text-base line-clamp-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
 
-          </p>
+            </p>
+            <a class="underline mt-1" href="#!">Readmore</a>
 
-          <div class="relative mt-8 flex items-center gap-x-4">
+          </div>
+
+          <div class="relative mt-auto flex items-center gap-x-4">
             <img src="https://source.unsplash.com/random/?user=id=4" alt="" class="h-10 w-10 rounded-full bg-gray-50">
             <div class="text-sm leading-6">
               <p class="font-semibold text-gray-900">
@@ -1057,7 +1085,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
+        <div class="flex flex-col border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -1066,16 +1094,20 @@
             <span class="text-white/50 text-base font-light mb-2 mr-2 inline-block">18 dec, 2023 &#x2022; 5 min
               read</span>
           </div>
-          <p class="font-light text-base">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
+           <div class="mb-8">
+            <p class="font-light  text-base line-clamp-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
 
-          </p>
+            </p>
+            <a class="underline mt-1" href="#!">Readmore</a>
 
-          <div class="relative mt-8 flex items-center gap-x-4">
+          </div>
+
+          <div class="relative mt-auto flex items-center gap-x-4">
             <img src="https://source.unsplash.com/random/?user=id=5" alt="" class="h-10 w-10 rounded-full bg-gray-50">
             <div class="text-sm leading-6">
               <p class="font-semibold text-gray-900">
@@ -1088,7 +1120,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
+        <div class="flex flex-col border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
           </h3>
@@ -1096,16 +1128,20 @@
             <span class="text-white/50 text-base font-light mb-2 mr-2 inline-block">18 dec, 2023 &#x2022; 5 min
               read</span>
           </div>
-          <p class="font-light text-base">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
+           <div class="mb-8">
+            <p class="font-light  text-base line-clamp-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
 
-          </p>
+            </p>
+            <a class="underline mt-1" href="#!">Readmore</a>
 
-          <div class="relative mt-8 flex items-center gap-x-4">
+          </div>
+
+          <div class="relative mt-auto flex items-center gap-x-4">
             <img src="https://source.unsplash.com/random/?user=id=10" alt="" class="h-10 w-10 rounded-full bg-gray-50">
             <div class="text-sm leading-6">
               <p class="font-semibold text-gray-900">
@@ -1118,7 +1154,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
+        <div class="flex flex-col border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -1127,16 +1163,20 @@
             <span class="text-white/50 text-base font-light mb-2 mr-2 inline-block">18 dec, 2023 &#x2022; 5 min
               read</span>
           </div>
-          <p class="font-light text-base">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
+           <div class="mb-8">
+            <p class="font-light  text-base line-clamp-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
 
-          </p>
+            </p>
+            <a class="underline mt-1" href="#!">Readmore</a>
 
-          <div class="relative mt-8 flex items-center gap-x-4">
+          </div>
+
+          <div class="relative mt-auto flex items-center gap-x-4">
             <img src="https://source.unsplash.com/random/?user=id=6" alt="" class="h-10 w-10 rounded-full bg-gray-50">
             <div class="text-sm leading-6">
               <p class="font-semibold text-gray-900">
@@ -1149,7 +1189,7 @@
             </div>
           </div>
         </div>
-        <div class="blog border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
+        <div class="flex flex-col border border-white/30 hover:border-white  border-collapse lg:p-10 p-5 lg:mx-0 mx-4">
           <h3 class="font-playfair lg:text-2xl text-lg mb-2 ">
             The standard Lorem Ipsum passage, used since the 1500s
 
@@ -1158,16 +1198,20 @@
             <span class="text-white/50 text-base font-light mb-2 mr-2 inline-block">18 dec, 2023 &#x2022; 5 min
               read</span>
           </div>
-          <p class="font-light text-base">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
+           <div class="mb-8">
+            <p class="font-light  text-base line-clamp-5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
 
-          </p>
+            </p>
+            <a class="underline mt-1" href="#!">Readmore</a>
 
-          <div class="relative mt-8 flex items-center gap-x-4">
+          </div>
+
+          <div class="relative mt-auto flex items-center gap-x-4">
             <img src="https://source.unsplash.com/random/?user=id=7" alt="" class="h-10 w-10 rounded-full bg-gray-50">
             <div class="text-sm leading-6">
               <p class="font-semibold text-gray-900">
@@ -1210,7 +1254,7 @@
       </div>
     </div>
   </section>
-
+  </main>
   <!--===================================================================================
                                            Footer
     ===================================================================================-->

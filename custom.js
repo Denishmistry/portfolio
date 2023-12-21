@@ -1,4 +1,14 @@
+
+
+
 window.addEventListener("load", function () {
+
+
+  tltransition.play(0);
+
+  var loading = true;
+
+
   init();
   var mobile = window.innerWidth < 768;
   // console.log(mobile);
@@ -179,9 +189,13 @@ window.addEventListener("load", function () {
 
     });
   }
-  OnLoadAnimation(".home h1", 20, 0, 0, 1, 0);
-  OnLoadAnimation(".home p", 20, 0, 0, 1, 0.4);
-  OnLoadAnimation(".home a", 20, 0, 0, 1, 0.8);
+  if(loading === true){
+
+    OnLoadAnimation(".home h1", 20, 0, 0, 1, 2);
+    OnLoadAnimation(".home p", 20, 0, 0, 1, 2.5);
+    OnLoadAnimation(".home a", 20, 0, 0, 1, 3);
+  }
+
 
   // ======================
   // Gsap SlideUp animation
@@ -335,7 +349,7 @@ ScrollTrigger.create({
   trigger: main,
   // pinnedContainer: '.container-pin',
   start: 'top top',
-  end:`+=${main.clientHeight + mobile ? 1500 : 4000  + 'px '}`,
+  end:`+=${main.clientHeight + (mobile ? 1500 : 4000)  + 'px '}`,
 
   pin: true,
   pinSpacing:true,
@@ -343,7 +357,7 @@ ScrollTrigger.create({
   animation: tl,
   markers: false,
 })
-
+console.log(mobile)
 // ===================================
 // Multiple Animation Call To Action
 // ===================================
@@ -511,6 +525,14 @@ TextScrollFunction(".project_text", "-100%", "-200%");
 
 
 });
+
+
+
+
+
+
+
+
   // =======================
   // Smooth windows Scroll
   // =======================
@@ -597,3 +619,87 @@ function SmoothScroll(target, speed, smooth) {
 //================
 
 // https://gsap.com/community/forums/topic/35406-animate-rotationx-and-y/
+
+// ================
+// page transition
+// ================
+const $main = document.querySelector("main");
+const $header = document.querySelector("header");
+// const $main = document.querySelector(".profile-page");
+const $logo = document.querySelector(".transition__logo");
+const $frameBlack = document.querySelector(".page-transition__black");
+const $frameRed = document.querySelector(".page-transition__seondary");
+// const $button = document.querySelector("#button");
+
+let tltransition = new TimelineMax({
+    paused: true,
+  })
+  .fromTo(
+    $frameRed,
+    0.5, {
+      scaleX: 0,
+    }, {
+      scaleX: 1,
+      transformOrigin: "left",
+      ease: Power4.easeInOut,
+    }
+  )
+  .fromTo(
+    $frameBlack,
+    .5, {
+      scaleX: 0,
+    }, {
+      scaleX: 1,
+      transformOrigin: "left",
+      ease: Power4.easeInOut,
+    },
+    0.2
+  )
+  .fromTo(
+    $logo,
+    0.5, {
+      // xPercent: -150,
+      autoAlpha: 0,
+    }, {
+
+      autoAlpha: 1,
+      ease: Power4.easeInOut,
+    },
+    0.5
+  )
+  .set($frameRed, {
+    scaleX: 0,
+  })
+
+  // .fromTo(
+  //   $header, {
+  //     autoAlpha: 0,
+  //   }, {
+  //     autoAlpha: 1,
+  //     ease: Power4.easeInOut,
+  //   }
+  // )
+
+  .to($frameBlack, 0.8, {
+    scaleX: 0,
+    transformOrigin: "right",
+    ease: Power4.easeInOut,
+  } )
+  .to(
+    $logo,
+    0.2, {
+
+      autoAlpha: 0,
+    },
+    "-=0.35"
+  ).
+  to($header,
+    {
+     opacity: 1,
+   }
+ ).
+  to($main,
+    {
+     opacity: 1,
+   }
+ )
