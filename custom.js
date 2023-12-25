@@ -1,6 +1,3 @@
-
-
-
 window.addEventListener("load", function () {
 
 
@@ -25,8 +22,8 @@ window.addEventListener("load", function () {
   const cursor = document.querySelector('.cursor')
 
   document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.screenX - 85 + 'px'
-    cursor.style.top = e.screenY - 142 + 'px'
+    cursor.style.left = e.clientX + 'px'
+    cursor.style.top = e.clientY + 'px'
     // console.log(e,e.screenY )
   })
   const links = document.querySelectorAll(
@@ -190,9 +187,9 @@ window.addEventListener("load", function () {
     });
   }
 
-    OnLoadAnimation(".home h1", 20, 0, 0, 1, 3);
-    OnLoadAnimation(".home p", 20, 0, 0, 1, 3.5);
-    OnLoadAnimation(".home a", 20, 0, 0, 1, 4);
+  OnLoadAnimation(".home h1", 20, 0, 0, 1, 3);
+  OnLoadAnimation(".home p", 20, 0, 0, 1, 3.5);
+  OnLoadAnimation(".home a", 20, 0, 0, 1, 4);
 
 
 
@@ -209,7 +206,7 @@ window.addEventListener("load", function () {
     StartPosition,
     EndPosition,
     markers
-    ) {
+  ) {
     const select2 = document.querySelectorAll(selector);
     gsap.utils.toArray(select2).forEach((slidedown) => {
       gsap.set(slidedown, {
@@ -243,84 +240,84 @@ window.addEventListener("load", function () {
     // SlideUp(".explore", "250", 150, 3, 0, 1, "top 80%", "bottom 60%", false);
 
   }, 300);
-// ==============================
-    // Gsap Stagger Animation
-    // ==============================
-    function staggerAnim(selector, staggerTime, y) {
-      const selectorelm = document.querySelectorAll(selector);
-      gsap.set(selectorelm, {
+  // ==============================
+  // Gsap Stagger Animation
+  // ==============================
+  function staggerAnim(selector, staggerTime, y) {
+    const selectorelm = document.querySelectorAll(selector);
+    gsap.set(selectorelm, {
+      opacity: 0,
+      y: y
+    });
+
+    let Start, End;
+    if (window.innerWidth > 768) {
+      Start = "top 85%";
+      End = "bottom 10%";
+
+    } else {
+      Start = "top 60%";
+      End = "bottom 0%";
+    }
+
+    ScrollTrigger.batch(selectorelm, {
+      scrub: 2,
+
+      start: Start,
+      end: End,
+      markers: false,
+      onEnter: batch => gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        stagger: staggerTime,
+
+      }),
+      onLeave: batch => gsap.to(batch, {
+        opacity: 0,
+        y: -y,
+
+      }),
+      onEnterBack: batch => gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        stagger: staggerTime
+      }),
+      onLeaveBack: batch => gsap.to(batch, {
         opacity: 0,
         y: y
-      });
+      }),
 
-      let Start, End;
-      if (window.innerWidth > 768) {
-        Start = "top 80%";
-        End = "bottom 30%";
+    });
 
-      } else {
-        Start = "top 60%";
-        End = "bottom 0%";
-      }
+    ScrollTrigger.addEventListener("refreshInit", () => gsap.set(selectorelm, {
+      y: y,
+      opacity: 0
+    }));
+  }
+  setTimeout(() => {
+    staggerAnim(".exp-main ", 0.1, 100);
+    staggerAnim(".blog ", 0.1, 100);
 
-      ScrollTrigger.batch(selectorelm, {
-        scrub: 2,
+  }, 300);
 
-        start: Start,
-        end: End,
-        markers: false,
-        onEnter: batch => gsap.to(batch, {
-          opacity: 1,
-          y: 0,
-          stagger: staggerTime,
-
-        }),
-        onLeave: batch => gsap.to(batch, {
-          opacity: 0,
-          y: -y,
-
-        }),
-        onEnterBack: batch => gsap.to(batch, {
-          opacity: 1,
-          y: 0,
-          stagger: staggerTime
-        }),
-        onLeaveBack: batch => gsap.to(batch, {
-          opacity: 0,
-          y: y
-        }),
-
-      });
-
-      ScrollTrigger.addEventListener("refreshInit", () => gsap.set(selectorelm, {
-        y: y,
-        opacity: 0
-      }));
-    }
-    setTimeout(() => {
-      staggerAnim(".exp-main ", 0.1, 100);
-      staggerAnim(".blog ", 0.1, 100);
-
-    }, 300);
-
-// ==================================
-// Multiple Animation About section
-// ===================================
+  // ==================================
+  // Multiple Animation About section
+  // ===================================
 
 
-const main = document.querySelector('.about')
+  const main = document.querySelector('.about')
 
-const tl = gsap.timeline({})
-tl.from('.about-image', {
+  const tl = gsap.timeline({})
+  tl.from('.about-image', {
 
-  opacity:0,
-  scale:0.8,
+    opacity: 0,
+    scale: 0.8,
 
-}).to('.about-image', {
-  opacity:1,
+  }).to('.about-image', {
+    opacity: 1,
 
-})
-tl.add(()=>{}, "+=0.2")
+  })
+  tl.add(() => {}, "+=0.2")
 
 
   tl.from('.about-image', {
@@ -328,127 +325,127 @@ tl.add(()=>{}, "+=0.2")
 
 
   }).to('.about-image', {
-    scale:0.8,
-    opacity:`${mobile ? "0" : "0.5"}`,
-    x:`${mobile ? "0" : "30%"}`
+    scale: 0.8,
+    opacity: `${mobile ? "0" : "0.5"}`,
+    x: `${mobile ? "0" : "30%"}`
   })
 
 
 
-tl.add(()=>{}, "+=0.2") // Add delay to the next animation
-tl.from('.about-wrapper', {
-  y: 50,
-  opacity:0,
-}).to('.about-wrapper', {
-  opacity:1,
-  y:0
-})
-// console.warn(main.clientHeight);
-ScrollTrigger.create({
-  trigger: main,
-  // pinnedContainer: '.container-pin',
-  start: 'top top',
-  end:`+=${main.clientHeight + (mobile ? 1500 : 4000)  + 'px '}`,
-
-  pin: true,
-  pinSpacing:true,
-  scrub: true,
-  animation: tl,
-  markers: false,
-})
-console.log(mobile)
-// ===================================
-// Multiple Animation Call To Action
-// ===================================
-
-
-const CTAmain = document.querySelector('#cta')
-gsap.set("#cta *", {
-  transformPerspective: 400,
-  transformStyle: "preserve-3d"
-});
-const cta_tl = gsap.timeline({})
-cta_tl.from('.line-1', {
-
-  opacity:0,
-  y:"100px",
-  rotationX:-20,
-
-}).to('.line-1', {
-  opacity:1,
-  y:"0",
-  rotationX:0,
-})
-cta_tl.add(()=>{}, "+=0.2")
-cta_tl.to('.line-1', {
-  opacity:0,
-  y:"-100px",
-  rotationX:20,
-})
-
-// Line 2
-cta_tl.from('.line-2', {
-
-  opacity:0,
-  y:"100px",
-  rotationX:-20,
-
-}).to('.line-2', {
-  opacity:1,
-  y:"0",
-  rotationX:0,
-})
-cta_tl.add(()=>{}, "+=0.2")
-cta_tl.to('.line-2', {
-  opacity:0,
-  y:"-100px",
-  rotationX:20,
-})
-// Line-3
-cta_tl.from('.line-3', {
-
-  opacity:0,
-  y:"100px",
-  rotationX:-20,
-
-}).to('.line-3', {
-  opacity:1,
-  y:"0",
-  rotationX:0,
-})
-cta_tl.add(()=>{}, "+=0.2")
-cta_tl.to('.line-3', {
-
-  y:"-100px",
-
-})
-// cta_tl.add(()=>{}, "+=0.2")
-// cta_tl.to('.line-3', {
-//   opacity:0,
-//   y:"-100px",
-//   rotationX:20,
-// })
-
-// console.warn(CTAmain.clientHeight);
-
-
-setTimeout(() => {
+  tl.add(() => {}, "+=0.2") // Add delay to the next animation
+  tl.from('.about-wrapper', {
+    y: 50,
+    opacity: 0,
+  }).to('.about-wrapper', {
+    opacity: 1,
+    y: 0
+  })
+  // console.warn(main.clientHeight);
   ScrollTrigger.create({
-    trigger: CTAmain,
+    trigger: main,
     // pinnedContainer: '.container-pin',
-    start: 'top 25%',
-    end:`+=${CTAmain.clientHeight + mobile ? 1500 : 4000 + 'px '}`,
+    start: 'top top',
+    end: `+=${main.clientHeight + (mobile ? 1500 : 4000)  + 'px '}`,
 
     pin: true,
+    pinSpacing: true,
     scrub: true,
-    animation: cta_tl,
+    animation: tl,
     markers: false,
   })
-},300)
-// ========================
-// Text scroll Animation
-// =======================
-function TextScrollFunction(selector, StartPositionX, EndPositionX) {
+  // console.log(mobile)
+  // ===================================
+  // Multiple Animation Call To Action
+  // ===================================
+
+
+  const CTAmain = document.querySelector('#cta')
+  gsap.set("#cta *", {
+    transformPerspective: 400,
+    transformStyle: "preserve-3d"
+  });
+  const cta_tl = gsap.timeline({})
+  cta_tl.from('.line-1', {
+
+    opacity: 0,
+    y: "100px",
+    rotationX: -20,
+
+  }).to('.line-1', {
+    opacity: 1,
+    y: "0",
+    rotationX: 0,
+  })
+  cta_tl.add(() => {}, "+=0.2")
+  cta_tl.to('.line-1', {
+    opacity: 0,
+    y: "-100px",
+    rotationX: 20,
+  })
+
+  // Line 2
+  cta_tl.from('.line-2', {
+
+    opacity: 0,
+    y: "100px",
+    rotationX: -20,
+
+  }).to('.line-2', {
+    opacity: 1,
+    y: "0",
+    rotationX: 0,
+  })
+  cta_tl.add(() => {}, "+=0.2")
+  cta_tl.to('.line-2', {
+    opacity: 0,
+    y: "-100px",
+    rotationX: 20,
+  })
+  // Line-3
+  cta_tl.from('.line-3', {
+
+    opacity: 0,
+    y: "100px",
+    rotationX: -20,
+
+  }).to('.line-3', {
+    opacity: 1,
+    y: "0",
+    rotationX: 0,
+  })
+  cta_tl.add(() => {}, "+=0.2")
+  cta_tl.to('.line-3', {
+
+    y: "-100px",
+
+  })
+  // cta_tl.add(()=>{}, "+=0.2")
+  // cta_tl.to('.line-3', {
+  //   opacity:0,
+  //   y:"-100px",
+  //   rotationX:20,
+  // })
+
+  // console.warn(CTAmain.clientHeight);
+
+
+  setTimeout(() => {
+    ScrollTrigger.create({
+      trigger: CTAmain,
+      // pinnedContainer: '.container-pin',
+      start: 'top 25%',
+      end: `+=${CTAmain.clientHeight + mobile ? 1500 : 4000 + 'px '}`,
+
+      pin: true,
+      scrub: true,
+      animation: cta_tl,
+      markers: false,
+    })
+  }, 300)
+  // ========================
+  // Text scroll Animation
+  // =======================
+  function TextScrollFunction(selector, StartPositionX, EndPositionX) {
 
     gsap.utils.toArray(selector).forEach((textanim) => {
       gsap.set(textanim, {
@@ -469,8 +466,8 @@ function TextScrollFunction(selector, StartPositionX, EndPositionX) {
       });
     });
 
-}
-TextScrollFunction(".project_text", "-100%", "-200%");
+  }
+  TextScrollFunction(".project_text", "-100%", "-200%");
 
   // ================
   // sticky header
@@ -523,6 +520,13 @@ TextScrollFunction(".project_text", "-100%", "-200%");
 
 
 
+  // document.querySelectorAll('.mobilemenu a').forEach((event) => {
+  //   event.addEventListener("click", (i) => {
+
+  //   });
+
+  // });
+
 });
 
 
@@ -532,82 +536,93 @@ TextScrollFunction(".project_text", "-100%", "-200%");
 
 
 
-  // =======================
-  // Smooth windows Scroll
-  // =======================
+// =======================
+// Smooth windows Scroll
+// =======================
 
 function init() {
   new SmoothScroll(document, 120, 12)
 }
 
 function SmoothScroll(target, speed, smooth) {
-
   if (target === document)
-    target = (document.scrollingElement ||
-      document.documentElement ||
-      document.body.parentNode ||
-      document.body) // cross browser support for document scrolling
+      target = (
+          document.scrollingElement ||
+          document.documentElement ||
+          document.body.parentNode ||
+          document.body
+      ); // cross browser support for document scrolling
 
-  var moving = false
-  var pos = target.scrollTop
-  var frame = target === document.body &&
-    document.documentElement ?
-    document.documentElement :
-    target // safari is the new IE
+  var moving = false;
+  var pos = target.scrollTop;
+  var frame =
+      target === document.body && document.documentElement
+          ? document.documentElement
+          : target; // safari is the new IE
 
-  target.addEventListener('mousewheel', scrolled, {
-    passive: false
-  })
-  target.addEventListener('DOMMouseScroll', scrolled, {
-    passive: false
-  })
+  target.addEventListener("mousewheel", scrolled, { passive: false });
+  target.addEventListener("DOMMouseScroll", scrolled, { passive: false });
 
   function scrolled(e) {
-    e.preventDefault(); // disable default scrolling
+      e.preventDefault(); // disable default scrolling
 
-    var delta = normalizeWheelDelta(e)
+      var delta = normalizeWheelDelta(e);
 
-    pos += -delta * speed
-    pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
+      pos += -delta * speed;
+      pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)); // limit scrolling
 
-    if (!moving) update()
+      if (!moving) update();
   }
 
   function normalizeWheelDelta(e) {
-    if (e.detail) {
-      if (e.wheelDelta)
-        return e.wheelDelta / e.detail / 40 * (e.detail > 0 ? 1 : -1) // Opera
-      else
-        return -e.detail / 3 // Firefox
-    } else
-      return e.wheelDelta / 120 // IE,Safari,Chrome
+      if (e.detail) {
+          if (e.wheelDelta)
+              return (
+                  (e.wheelDelta / e.detail) * 40 * (e.detail > 0 ? 1 : -1)
+              ); // Opera
+          else return -e.detail / 3; // Firefox
+      } else return e.wheelDelta / 120; // IE,Safari,Chrome
   }
 
   function update() {
-    moving = true
+      moving = true;
 
-    var delta = (pos - target.scrollTop) / smooth
+      var delta = (pos - target.scrollTop) / smooth;
 
-    target.scrollTop += delta
+      target.scrollTop += delta;
 
-    if (Math.abs(delta) > 0.5)
-      requestFrame(update)
-    else
-      moving = false
+      if (Math.abs(delta) > 0.5) requestFrame(update);
+      else moving = false;
   }
 
-  var requestFrame = function () { // requestAnimationFrame cross browser
-    return (
-      window.requestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      window.mozRequestAnimationFrame ||
-      window.oRequestAnimationFrame ||
-      window.msRequestAnimationFrame ||
-      function (func) {
-        window.setTimeout(func, 1000 / 50);
-      }
-    );
-  }()
+  var requestFrame =
+      (function () {
+          // requestAnimationFrame cross browser
+          return (
+              window.requestAnimationFrame ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame ||
+              window.oRequestAnimationFrame ||
+              window.msRequestAnimationFrame ||
+              function (func) {
+                  window.setTimeout(func, 1000 / 50);
+              }
+          );
+      })();
+
+  // Additional code to handle smooth scroll when clicking on links
+  var links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+          e.preventDefault();
+          var targetId = this.getAttribute("href").substring(1);
+          var targetElement = document.getElementById(targetId);
+          if (targetElement) {
+              pos = targetElement.offsetTop;
+              update();
+          }
+      });
+  });
 }
 
 
@@ -654,14 +669,18 @@ let tltransition = new TimelineMax({
     },
     0.2
   )
-  .fromTo($logo , 0.5,
-     {xPercent: -100, autoAlpha:0 },
-     {xPercent: -50, autoAlpha:1,
-      ease: Power4.easeInOut},
+  .fromTo($logo, 0.5, {
+      xPercent: -100,
+      autoAlpha: 0
+    }, {
+      xPercent: -50,
+      autoAlpha: 1,
+      ease: Power4.easeInOut
+    },
     .7)
-    .set($frameRed, {
-      scaleX: 0,
-    })
+  .set($frameRed, {
+    scaleX: 0,
+  })
 
   // .fromTo(
   //   $header, {
@@ -671,20 +690,16 @@ let tltransition = new TimelineMax({
   //     ease: Power4.easeInOut,
   //   }
   // )
-  .to($header,
-    {
-     opacity: 1,
-   }
- ).to($main,
-    {
-     opacity: 1,
-   }
- )
-  .to($frameBlack,1.2, {
+  .to($header, {
+    opacity: 1,
+  }).to($main, {
+    opacity: 1,
+  })
+  .to($frameBlack, 1.2, {
     scaleX: 0,
     transformOrigin: "right",
     ease: Power4.easeInOut,
-  } )
+  })
 
   .to(
     $logo,

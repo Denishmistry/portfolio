@@ -39,10 +39,8 @@ module.exports = {
       container: {
         center: true,
         screens: {
-          xl: '1600px',
-          lg: '1024px',
-          md: '768px',
-          sm: '640px',
+          xl: '95vw',
+
         },
         padding: {
           xl: '15px',

@@ -492,34 +492,10 @@ video {
   padding-right: 1rem;
   padding-left: 1rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 95vw) {
 
   .container {
-    max-width: 640px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-@media (min-width: 1600px) {
-
-  .container {
-    max-width: 1600px;
+    max-width: 95vw;
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -1476,10 +1452,6 @@ header.fixed-header.header-anim {
     display: inline-block;
   }
 
-  .lg\:w-\[90vw\] {
-    width: 90vw;
-  }
-
   .lg\:max-w-\[90\%\] {
     max-width: 90%;
   }
@@ -1569,6 +1541,10 @@ header.fixed-header.header-anim {
 
   .lg\:pr-12 {
     padding-right: 3rem;
+  }
+
+  .lg\:pr-32 {
+    padding-right: 8rem;
   }
 
   .lg\:text-2xl {
