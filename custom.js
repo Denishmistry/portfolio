@@ -236,8 +236,8 @@ window.addEventListener("load", function () {
     SlideUp(".wid-child-2", `${mobile ? "60" : "300"}`, `${mobile ? "0" : "50"}`, 3, 0, 1, "top 100%", "bottom 75%", false);
     SlideUp(".wid-child-3", `${mobile ? "60" : "400"}`, `${mobile ? "0" : "100"}`, 3, 0, 1, "top 100%", "bottom 75%", false);
     SlideUp(".slup", "100", 0, 3, 0, 1, "top 100%", `${mobile ? "bottom 85%" : "bottom 75%"}`, false);
-    SlideUp(".scroll-down", "100", 0, 3, 0, 1, "top 100%", `${mobile ? "bottom 85%" : "bottom 75%"}`, false);
 
+    SlideUp(".scroll-down", 0, -20, 3, 0, 1, "top 80%", "bottom 80%", false);
     // SlideUp(".explore", "250", 150, 3, 0, 1, "top 80%", "bottom 60%", false);
 
   }, 300);

@@ -767,6 +767,9 @@ header.fixed-header.header-anim {
 .h-\[95vh\] {
   height: 95vh;
 }
+.h-\[100dvh\] {
+  height: 100dvh;
+}
 .min-h-\[50vh\] {
   min-height: 50vh;
 }
