@@ -764,6 +764,9 @@ header.fixed-header.header-anim {
 .h-screen {
   height: 100vh;
 }
+.h-\[95vh\] {
+  height: 95vh;
+}
 .min-h-\[50vh\] {
   min-height: 50vh;
 }
@@ -772,6 +775,9 @@ header.fixed-header.header-anim {
 }
 .min-h-\[95vh\] {
   min-height: 95vh;
+}
+.min-h-full {
+  min-height: 100%;
 }
 .w-10 {
   width: 2.5rem;
@@ -1507,6 +1513,10 @@ html {
 
   .lg\:inline-block {
     display: inline-block;
+  }
+
+  .lg\:h-screen {
+    height: 100vh;
   }
 
   .lg\:min-h-screen {
