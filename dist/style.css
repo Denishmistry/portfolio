@@ -770,6 +770,9 @@ header.fixed-header.header-anim {
 .min-h-screen {
   min-height: 100vh;
 }
+.min-h-\[95vh\] {
+  min-height: 95vh;
+}
 .w-10 {
   width: 2.5rem;
 }
@@ -1504,6 +1507,10 @@ html {
 
   .lg\:inline-block {
     display: inline-block;
+  }
+
+  .lg\:min-h-screen {
+    min-height: 100vh;
   }
 
   .lg\:max-w-\[90\%\] {
