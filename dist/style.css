@@ -704,6 +704,9 @@ header.fixed-header.header-anim {
 .mt-1 {
   margin-top: 0.25rem;
 }
+.mt-10 {
+  margin-top: 2.5rem;
+}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1014,10 +1017,6 @@ header.fixed-header.header-anim {
   font-size: 1.5rem;
   line-height: 2rem;
 }
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1170,7 +1169,7 @@ header.fixed-header.header-anim {
 }
 .transition__logo {
 
-  font-size: 30px;
+
   position: fixed;
   color: #fff;
   top: 50vh;
@@ -1242,6 +1241,54 @@ header.fixed-header.header-anim {
         }
       }
 /* scroll down */
+.scroll-down
+{
+    /* position: relative;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%,-50%); */
+
+    width: 100%;
+    text-align: center;
+
+}
+.scroll-down span:nth-child(2)
+{
+    animation-delay: -0.2s;
+}
+.scroll-down span:nth-child(3)
+{
+    animation-delay: -0.4s;
+}
+.scroll-down span
+{
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(45deg);
+    margin: -10px;
+    margin: 0 auto;
+    animation: animate 2s infinite;
+}
+@keyframes animate
+{
+    0%
+  {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%
+  {
+        opacity: 1;
+    }
+    100%
+  {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -1579,12 +1626,6 @@ header.fixed-header.header-anim {
 
   .lg\:leading-lh16 {
     line-height: 1.6;
-  }
-}
-@media (min-width: 1280px) {
-
-  .xl\:pr-32 {
-    padding-right: 8rem;
   }
 }
 .\[\&\.open\]\:fixed.open {
