@@ -43,13 +43,10 @@
       }
 }
 @layer utilities {
-  body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-  html {
-    height: -webkit-fill-available;
-  }
+.mobile-height{
+  height: calc(var(--vh, 1vh) * 100);
+
+}
 /* page transition */
 .page-transition__black {
   position: fixed;

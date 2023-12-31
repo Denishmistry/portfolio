@@ -764,23 +764,11 @@ header.fixed-header.header-anim {
 .h-screen {
   height: 100vh;
 }
-.h-\[95vh\] {
-  height: 95vh;
-}
-.h-\[100dvh\] {
-  height: 100dvh;
-}
 .min-h-\[50vh\] {
   min-height: 50vh;
 }
 .min-h-screen {
   min-height: 100vh;
-}
-.min-h-\[95vh\] {
-  min-height: 95vh;
-}
-.min-h-full {
-  min-height: 100%;
 }
 .w-10 {
   width: 2.5rem;
@@ -846,6 +834,9 @@ header.fixed-header.header-anim {
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.resize {
+  resize: both;
 }
 .flex-col {
   flex-direction: column;
@@ -1005,10 +996,6 @@ header.fixed-header.header-anim {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1154,13 +1141,10 @@ header.fixed-header.header-anim {
 .duration-700 {
   transition-duration: 700ms;
 }
-body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-html {
-    height: -webkit-fill-available;
-  }
+.mobile-height{
+  height: calc(var(--vh, 1vh) * 100);
+
+}
 /* page transition */
 .page-transition__black {
   position: fixed;
@@ -1520,10 +1504,6 @@ html {
 
   .lg\:h-screen {
     height: 100vh;
-  }
-
-  .lg\:min-h-screen {
-    min-height: 100vh;
   }
 
   .lg\:max-w-\[90\%\] {
